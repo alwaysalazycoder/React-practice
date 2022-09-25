@@ -1,23 +1,23 @@
 import React from 'react'
 
 
-export const Footer = () => {
+export const Footer = (props) => {
   let stylesheet = {
     border : "4px solid black",
   }
   return (
 
-    <div className="card" style = {stylesheet}>
-      <div className="card-header">Footer</div>
-      <div className="card-body">
-        <blockquote className="blockquote mb-0">
-          <p>A well-known quote, contained in a blockquote element.</p>
-          <footer className="blockquote-footer">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote>
+
+    <div className="row fixed-bottom">
+      <span className='col-1'></span>
+      <button className='btn btn-danger col-2' onClick = {() => {props.reset()}}>Reset</button>
+      <div className='col-5 bg-dark text-white ' >
+        {props.totalAmount}
       </div>
+      <button className='btn btn-primary col-2' onClick = {() => {props.paynow()}} >Pay Now !</button>
     </div>
+
+  
 
   )
 }
