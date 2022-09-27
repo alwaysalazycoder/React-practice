@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   return (
     <>
 
@@ -9,8 +9,12 @@ export const Navbar = () => {
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Cart
+            &nbsp;
+            {props.badge}
           </a>
+          
         </div>
+        
       </nav>
 
     </>

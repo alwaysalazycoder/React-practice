@@ -7,8 +7,8 @@ export default function Product(props) {
 
       <div className="row">
 
-        <div className="col-6" >
-          <h2 className='boxer'><span >{props.product.name}</span> <span className="badge bg-secondary">₹{props.product.price}</span></h2>
+        <div className="col-5" >
+          <h2 className='boxer '><span >{props.product.name}</span> <span className=" badge bg-secondary">₹{props.product.price}</span></h2>
         </div>
 
         <div className="col-2">
@@ -20,7 +20,12 @@ export default function Product(props) {
         </div>
 
         <div
-          className="col-4">{props.product.quantity * props.product.price}
+          className="col-2">{props.product.quantity * props.product.price}
+        </div>
+        <div className="col-2">
+          <button className="col-6 btn btn-danger" onClick={()=>{props.removeItem(props.index)}}>
+            Remove
+          </button>
         </div>
       </div>
     </>
