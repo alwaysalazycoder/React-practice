@@ -103,7 +103,12 @@ function App() {
       let newproductList = [...productList];
       let newtotalAmount = totalAmount;
         newtotalAmount = newtotalAmount - (newproductList[index].quantity * newproductList[index].price);
+        let quantity = newproductList[index].quantity;
         newproductList.splice(index,1);
+        let newbadge = badge;
+        newbadge = newbadge-quantity;
+
+        setbadge(newbadge);
         setproductList(newproductList);
         settotalAmount(newtotalAmount);
     }
